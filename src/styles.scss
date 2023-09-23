@@ -1,1 +1,16 @@
-/* You can add global styles to this file, and also import other style files */
+$dirty-green: rgb(60, 92, 60);
+
+* {
+  font-family: Arial;
+}
+
+.btn {
+  background-color: white;
+  border-radius: 8px;
+  border: 2px solid $dirty-green;
+  color: $dirty-green;
+  padding: 14px 28px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+}

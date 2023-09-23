@@ -1,5 +1,5 @@
 <div
-  class="fixed top-12 z-aboveModal flex h-12 w-full -translate-y-1/2 justify-center"
+  class="fixed top-12 z-aboveModal flex h-0 w-full -translate-y-1/2 justify-center"
 >
   <div class="flex flex-col gap-3">
     <ng-container *ngIf="toasts$ | async as toasts">
@@ -10,7 +10,10 @@
       >
         <span>{{ toast.text }}</span>
 
-        <button (click)="service.removeToast(toast)">
+        <button
+          class="unset cursor-pointer"
+          (click)="service.removeToast(toast)"
+        >
           <icon-close></icon-close>
         </button>
       </div>

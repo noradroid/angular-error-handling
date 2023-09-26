@@ -34,14 +34,7 @@ export class AppComponent {
       },
       error: (err: HttpErrorResponse) => {
         console.log(err);
-        if (err.status === 0) {
-          this.toasts.info(
-            'An error has occurred. Pleas check the logs for more details.'
-          );
-          console.log(err);
-        } else {
-          this.serverErrorHandler(err);
-        }
+        this.serverErrorHandler(err);
       },
     });
   }
